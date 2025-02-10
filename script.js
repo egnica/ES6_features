@@ -6,15 +6,13 @@ function bubbleSort(arr) {
 
   do {
     swapped = false;
-    for (let i = 0; i < n - 1; i++) {
-
-      // ✅ Ensure `i` stops before `n-1`
+    for (let i = 0; i < n; i++) {
       if (arr[i] > arr[i + 1]) {
         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]; // Swap
         swapped = true;
       }
     }
-     n--; // ✅ Reduce range to optimize
+ 
   } while (swapped);
 
   return arr;
