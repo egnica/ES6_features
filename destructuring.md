@@ -102,8 +102,8 @@ How it works:
 - The process repeats until the array is fully sorted.
 
 > ### What’s Happening in `[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]` and why it works
-
-We want to swap two values in an array without using a temporary variable.
+>
+> We want to swap two values in an array without using a temporary variable.
 
 for example:
 `arr = [5, 2, 9, 1, 5, 6];`
