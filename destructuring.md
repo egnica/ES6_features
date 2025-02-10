@@ -88,7 +88,7 @@ How it works:
 - If two adjacent elements are out of order, they swap.
 - The process repeats until the array is fully sorted.
 
-complete breakdown on The Bubble Sort Algorithm
+### Complete breakdown on The Bubble Sort Algorithm
 
 #### Step 1: Function Definition & Setup
 
