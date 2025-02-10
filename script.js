@@ -12,11 +12,10 @@ function bubbleSort(arr) {
         swapped = true;
       }
     }
- 
   } while (swapped);
 
   return arr;
 }
 
-const numbers = [5, 2, 9, 1, 5, 6];
+const numbers = [5, 2, 9, 1, 102, 5, 6, 12, 10];
 console.log(bubbleSort(numbers));

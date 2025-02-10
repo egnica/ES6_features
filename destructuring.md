@@ -1,4 +1,4 @@
-# Array Destructuring
+# 1. Array Destructuring
 
 ## Basic example
 
@@ -100,5 +100,82 @@ How it works:
 - The algorithm loops through the array.
 - If two adjacent elements are out of order, they swap.
 - The process repeats until the array is fully sorted.
+
+## Although this is interesting, I would still use the built in .sort() function for this
+
+### note : for (let i = 0; i < n; i++)
+
+in this `for loop`, it is recommended to use `i < n - 1` if comparing adjacent elements. Since there is a point that n+1 is being compared, that would cover the last element in the length of the array. This was confusing me at first, but I think it makes more sense now that I think about it. The `n-1` avoids any 'out of bounds error'. But using just the length without the '-1' doesn't seem to cause an out of bounds.
+
+# 2. Object Destructuring
+
+## Basic Example
+
+instead of:
+
+```js
+const person = { name: "Nicholas", age: 30, city: "Minneapolis" };
+const name = person.name;
+const age = person.age;
+console.log(name, age); // Nicholas, 30
+```
+
+Use object destructuring:
+
+```js
+const person = { name: "Nicholas", age: 30, city: "Minneapolis" };
+const { name, age } = person;
+console.log(name, age); // Nicholas, 30
+```
+
+## Renaming Variables
+
+If you want to assign an object property to a variable with a different name:
+
+```js
+const person = { name: "Nicholas", age: 30 };
+const { name: fullName, age: years } = person;
+console.log(fullName, years); // Nicholas, 30
+```
+
+## Setting Default Values
+
+If a property is undefined, you can set a default value:
+
+```js
+const person = { name: "Nicholas" };
+const { name, age = 25 } = person;
+console.log(name, age); // Nicholas, 25
+```
+
+## Using the Rest Operator (...) in Objects
+
+```js
+const user = {
+  name: "Nicholas",
+  age: 30,
+  city: "Minneapolis",
+  job: "Developer",
+};
+const { name, age, ...details } = user;
+console.log(details); // { city: "Minneapolis", job: "Developer" }
+```
+
+# 3. Nested Destructuring
+
+## Destructuring Nested Objects
+
+```js
+const person = {
+  name: "Nicholas",
+  address: {
+    city: "Minneapolis",
+    state: "Minnesota",
+  },
+};
+
+const { name, address: { city, state } } = person;
+console.log(city, state); // Minneapolis, Minnesota
+```
 
 [Back to Main](readme.md)
