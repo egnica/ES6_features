@@ -105,4 +105,33 @@ What is happening:
 - `n = arr.length:` Stores the length of the array (number of elements).
 - `swapped`: A boolean flag used to track whether a swap occurred. (This prevents unnecessary iterations if the array is already sorted.)
 
+#### Step 2: Outer Loop (do-while)
+
+```js
+  do {
+    swapped = false;
+```
+
+What is happening:
+
+- The `do-while` loop ensures at least one iteration is executed.
+- `swapped = false`: Before each pass, we assume the array is sorted. If any swaps happen during this pass, swapped will be set to true.
+
+#### Step 3: Inner Loop (for loop)
+
+```js
+for (let i = 0; i < n - 1; i++) {
+  if (arr[i] > arr[i + 1]) {
+    // Swap using destructuring
+    [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+    swapped = true;
+  }
+}
+```
+
+What is happening:
+
+- `for (let i = 0; i < n - 1; i++)`
+  - Iterates through the array from index 0 to n-2 (since we compare adjacent elements).
+
 [Back to Main](readme.md)
