@@ -1,5 +1,6 @@
 # ES6 Features Glossary
 
 ## Highlighted Features:
-- [Array Destructuring](destructuring.md)
+
+- [Array & Object Destructuring](destructuring.md)
 - [Spread & Rest Operators](spread.md)
