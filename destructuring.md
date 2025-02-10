@@ -101,7 +101,9 @@ How it works:
 - If two adjacent elements are out of order, they swap.
 - The process repeats until the array is fully sorted.
 
-==What’s Happening in `[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]` and why it works==
+<div background-color="red">
+
+### What’s Happening in `[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]` and why it works
 
 We want to swap two values in an array without using a temporary variable.
 
@@ -118,6 +120,7 @@ This would be a valid swap that also mutates the original array:
 [secondArr[i], secondArr[i + 1]] = [secondArr[i + 1], secondArr[i]];
 ```
 
+</div>
 #### Although this is interesting, I would still use the built in .sort() function for this
 
 ### note : for (let i = 0; i < n; i++)
