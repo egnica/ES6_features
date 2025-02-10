@@ -101,7 +101,8 @@ How it works:
 - If two adjacent elements are out of order, they swap.
 - The process repeats until the array is fully sorted.
 
-### |What’s Happening in `[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]` and why it works |
+````
+### What’s Happening in `[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]` and why it works
 
 We want to swap two values in an array without using a temporary variable.
 
@@ -116,8 +117,9 @@ This would be a valid swap that also mutates the original array:
 
 ```js
 [secondArr[i], secondArr[i + 1]] = [secondArr[i + 1], secondArr[i]];
-```
+````
 
+````
 #### Although this is interesting, I would still use the built in .sort() function for this
 
 ### note : for (let i = 0; i < n; i++)
@@ -135,7 +137,7 @@ const person = { name: "Nicholas", age: 30, city: "Minneapolis" };
 const name = person.name;
 const age = person.age;
 console.log(name, age); // Nicholas, 30
-```
+````
 
 Use object destructuring:
 
