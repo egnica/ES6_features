@@ -19,3 +19,13 @@ function bubbleSort(arr) {
 
 const numbers = [5, 2, 9, 1, 102, 5, 6, 12, 10];
 console.log(bubbleSort(numbers));
+
+//// swapping
+let i = 0;
+const secondArr = [5, 2, 9];
+console.log(secondArr);
+console.log([secondArr[i], secondArr[i + 1]]);
+console.log(
+  ([secondArr[i], secondArr[i + 1]] = [secondArr[i + 1], secondArr[i]])
+);
+console.log(secondArr);
