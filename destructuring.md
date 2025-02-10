@@ -84,13 +84,16 @@ console.log(bubbleSort(numbers));
 
 The Bubble Sort algorithm keeps running as long as swapped remains true. The process stops once no swaps occur in a full pass through the array.
 
+- **One full pass**
+
 ```js
 [5, 2, 9, 1, 5, 6]  (Initial)
  ^  ^  Swap → [2, 5, 9, 1, 5, 6]
-       ^  ^  No swap
-          ^  ^  Swap → [2, 5, 1, 9, 5, 6]
-             ^  ^  Swap → [2, 5, 1, 5, 9, 6]
-                ^  ^  Swap → [2, 5, 1, 5, 6, 9]
+                  ^  ^  No swap
+               [2, 5, 9, 1, 5, 6]
+                      ^  ^  Swap → [2, 5, 1, 9, 5, 6]
+                                       ^  ^  Swap → [2, 5, 1, 5, 9, 6]
+                                                                 ^  ^  Swap → [2, 5, 1, 5, 6, 9]
 ```
 
 How it works:
