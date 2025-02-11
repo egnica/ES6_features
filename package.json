@@ -1,15 +1,16 @@
 {
-  "name": "es6_features",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "ES6_features"
-  },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.6"
+  }
 }
