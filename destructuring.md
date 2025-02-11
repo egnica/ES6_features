@@ -198,7 +198,30 @@ const {
 console.log(city, state); // Minneapolis, Minnesota
 ```
 
+- Something I do a lot is use json instead of a database for read options.
+  Destructuring is great for these json objects as well as the nested array objects.
 
+```js
+{
+  Object.values(BBC.event).map(({ title, speakers }) => {
+    const [{ fName, lName }] = speakers;
+    {
+      console.log(fName);
+    }
+    return (
+      <>
+        <h3>{title}</h3>
+        <p>
+          {fName} {lName}
+        </p>
+      </>
+    );
+  });
+}
+```
 
+- the json object has `key | value` pairs like `title`, there is a nested array of objects called `speakers`
+  - I destructured `title` and `speakers`
+  - Then destructured `speakers` to get `fName` and `lName`
 
 [Back to Main](readme.md)
